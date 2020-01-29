@@ -45,20 +45,7 @@ WHERE first_name="Harpo" and last_name="Williams";
 
 -- 5a. The command below is not really meant to be run because the table already exists.
 
-CREATE TABLE address (
-  address_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  address VARCHAR(50) NOT NULL,
-  address2 VARCHAR(50) DEFAULT NULL,
-  district VARCHAR(20) NOT NULL,
-  city_id SMALLINT UNSIGNED NOT NULL,
-  postal_code VARCHAR(10) DEFAULT NULL,
-  phone VARCHAR(20) NOT NULL,
-  location GEOMETRY,
-  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY  (address_id),
-  KEY idx_fk_city_id (city_id)l
-  )
-  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+SHOW CREATE TABLE sakila.address;
   
 -- 6a.
 
